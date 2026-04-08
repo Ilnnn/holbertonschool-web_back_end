@@ -1,21 +1,23 @@
-#!/usr/bin/python3
-
+#!/usr/bin/env python3
 import asyncio
+import time
 from typing import List
 
 task_wait_random = __import__('3-tasks').task_wait_random
 
-
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
 
-delays = []
+    tasks = []
+    for _ in range(n):
+        tasks.append(task_wait_random(max_delay))
     
-for _ in range(n):
-    delay = await task_wait_random(max_delay)
-    delays.append(delay)
+    print("-- LOG: All tasks spawned --")
 
-        delays.sort() 
+    delays = []
+    for task in tasks:
+        delay = await task
+        delays.append(delay)
     
-    print(f"DEBUG: List size is {len(delays)}")
+    print(f"-- LOG: Collected {delay} results --")
     
     return delays
