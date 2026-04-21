@@ -1,13 +1,11 @@
+#!/usr/bin/env python3
+"""
+Provides a utility function to interact with a MongoDB collection.
+"""
+
+
 def list_all(mongo_collection):
     """
-    Lists all documents in a pymongo collection.
-    
-    Args:
-        mongo_collection: A pymongo collection object.
-        
-    Returns:
-        A list of documents (dictionaries), or an empty list if none exist.
+    Lists all documents in a specific MongoDB collection.
     """
-    documents = list(mongo_collection.find())
-    
-    return documents
+    return list(mongo_collection.find())
