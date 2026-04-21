@@ -1,5 +1,6 @@
-// Adds a new attribute to all documents with name="Holberton school"
+// Update all documents with the name "Holberton school"
+// The $set operator adds the new attribute "address" or updates it if it already exists
 db.school.updateMany(
-    { name: "Holberton school" },
-    { $set: { address: "972 Mission street" } }
+    { "name": "Holberton school" },
+    { "$set": { "address": "972 Mission street" } }
 );
