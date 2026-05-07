@@ -4,7 +4,6 @@
   "description": "Holberton School back-end project configuration",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-node",
     "test": "jest"
   },
   "author": "",
