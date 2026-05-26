@@ -1,4 +1,4 @@
-import { readDatabase } from '../utils.js';
+import readDatabase from '../utils';
 
 export default class StudentsController {
   static async getAllStudents(req, res) {
@@ -9,7 +9,9 @@ export default class StudentsController {
       let output = 'This is the list of our students';
 
       keys.forEach((field) => {
-        output += `\nNumber of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`;
+        const list = fields[field].join(', ');
+        output += `\nNumber of students in ${field}: ${fields[field].length}. `;
+        output += `List: ${list}`;
       });
 
       return res.status(200).send(output);
