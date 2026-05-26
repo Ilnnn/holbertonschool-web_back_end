@@ -54,7 +54,7 @@ app.get('/students', (req, res) => {
       res.send(`This is the list of our students\n${output}`);
     })
     .catch((error) => {
-      res.status(500).send(error.message);
+      res.status(500).send(`This is the list of our students\n${error.message}`);
     });
 });
 
