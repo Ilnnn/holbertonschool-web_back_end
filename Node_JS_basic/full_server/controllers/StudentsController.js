@@ -5,7 +5,8 @@ export default class StudentsController {
     const dbFile = process.argv[2];
     try {
       const fields = await readDatabase(dbFile);
-      const keys = Object.keys(fields).sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+      const keys = Object.keys(fields)
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
       let output = 'This is the list of our students';
 
       keys.forEach((field) => {
