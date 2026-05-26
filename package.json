@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node full_server/server.js ./database.csv"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
