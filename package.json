@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "start": "node full_server/server.js ./database.csv"
+    "start": "node Node_JS_basic/full_server/server.js ./Node_JS_basic/database.csv"
   },
   "dependencies": {
     "express": "^5.2.1"
